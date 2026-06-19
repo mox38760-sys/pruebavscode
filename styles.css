@@ -639,18 +639,18 @@ h1 {
   }
 
   .project-slide {
-    min-height: 100dvh;
-    align-items: end;
+    min-height: auto;
+    align-items: flex-start;
   }
 
   .poster-slide {
-    align-items: center;
-    padding: 72px 10px 82px;
+    align-items: flex-start;
+    padding: 0;
   }
 
   .poster-stage {
     width: min(100%, 680px);
-    height: min(78dvh, 860px);
+    height: auto;
   }
 
   .poster-actions {
