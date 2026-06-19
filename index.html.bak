@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MOX | Revista de proyectos</title>
+    <meta
+      name="description"
+      content="MOX, revista vertical de proyectos arquitectonicos, oportunidades de desarrollo y escenarios de inversion."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar" aria-label="Navegacion principal">
+      <a class="brand" href="#proyecto-1" aria-label="MOX inicio">
+        <span class="brand-mark">MOX</span>
+        <span class="brand-line"></span>
+      </a>
+      <nav class="nav">
+        <a href="#proyecto-1">Proyectos</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+        <a class="nav-whatsapp" href="https://wa.me/573219931029" target="_blank" rel="noreferrer">WhatsApp</a>
+      </nav>
+    </header>
+
+    <main class="feed" id="proyectos">
+      <section
+        class="project-slide poster-slide"
+        id="proyecto-1"
+        data-project="lodge"
+      >
+        <div class="poster-stage">
+          <img src="./proyectos/001/principal.png" alt="Imagen principal Refugio Rio Frio" />
+        </div>
+        <div class="poster-actions" aria-label="Acciones del proyecto Refugio Rio Frio">
+          <a class="primary-action" href="#proyecto-1-detalle-1">Ver mas</a>
+          <a class="secondary-action" href="https://wa.me/573219931029?text=Hola%20MOX%2C%20quiero%20reservar%20o%20conocer%20mas%20sobre%20Refugio%20Rio%20Frio." target="_blank" rel="noreferrer">Reservar</a>
+        </div>
+      </section>
+
+      <section class="project-slide image-slide" id="proyecto-1-detalle-1">
+        <div class="image-stage">
+          <img src="./proyectos/001/principal.png" alt="Imagen principal Refugio Rio Frio" />
+        </div>
+      </section>
+
+      <section class="project-slide image-slide" id="proyecto-1-detalle-2">
+        <div class="image-stage">
+          <img src="./proyectos/001/potencial.png" alt="Render de potencial Refugio Rio Frio" />
+        </div>
+      </section>
+
+      <section class="project-slide image-slide" id="proyecto-1-detalle-3">
+        <div class="image-stage">
+          <img src="./proyectos/001/desarrollo.png" alt="Concepto de desarrollo Refugio Rio Frio" />
+        </div>
+      </section>
+    </main>
+
+    <div class="rail" aria-label="Indicador de proyectos">
+      <a href="#proyecto-1" aria-label="Ir al proyecto 1"></a>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
