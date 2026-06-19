@@ -239,6 +239,36 @@ a {
 .project-title { font-weight:800; font-size:15px; }
 .project-sub { font-size:13px; color: var(--muted); margin-top:4px; }
 
+.project-label {
+  padding: 28px 20px 16px;
+  display: flex;
+  justify-content: center;
+}
+.project-label-inner {
+  width: min(980px, 100%);
+}
+.project-label-type {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.project-label-title {
+  margin: 0 0 10px;
+  font-size: clamp(32px, 5vw, 44px);
+  line-height: 1.05;
+  font-weight: 800;
+  color: var(--ink);
+}
+.project-label-sub {
+  margin: 0;
+  max-width: 760px;
+  color: rgba(11, 61, 46, 0.78);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
 /* small screens: stack */
 @media (max-width:520px){
   .project-item { flex-direction:row; gap:10px; padding:10px; }
