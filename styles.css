@@ -169,7 +169,7 @@ a {
 .image-slide {
   position: relative;
   background: transparent;
-  padding: 36px 0 20px;
+  padding: 0;
 }
 
 .image-slide::before,
