@@ -71,3 +71,69 @@ window.addEventListener("keydown", (event) => {
 
   imgs.forEach((img) => observer.observe(img));
 })();
+
+// Hero background video: loop only the first 13 seconds
+(function () {
+  const video = document.getElementById('hero-video');
+  const MAX_SECONDS = 13;
+  if (!video) return;
+
+  // Debug: log events to console
+  console.log('[hero-debug]', 'video element found');
+
+  // Ensure muted to allow autoplay on most browsers
+  video.muted = true;
+
+  // When metadata loaded, clamp start if needed
+  video.addEventListener('loadedmetadata', () => {
+    if (video.duration && video.duration > MAX_SECONDS) {
+      video.currentTime = 0;
+    }
+    // try to play (some browsers require user gesture unless muted)
+    video.play().catch(() => {});
+    console.log('[hero-debug]', 'loadedmetadata — duration: ' + (video.duration || 'unknown'));
+  });
+  video.addEventListener('loadeddata', () => console.log('[hero-debug]', 'loadeddata — ready to play'));
+  video.addEventListener('playing', () => console.log('[hero-debug]', 'playing'));
+  video.addEventListener('error', (e) => console.log('[hero-debug]', 'video error: ' + (video.error && video.error.code ? video.error.code : 'unknown')));
+  video.addEventListener('stalled', () => console.log('[hero-debug]', 'stalled'));
+  video.addEventListener('emptied', () => console.log('[hero-debug]', 'emptied'));
+
+  // Play only the first MAX_SECONDS seconds once, then show the final frame
+  let endedByLimit = false;
+  video.addEventListener('timeupdate', () => {
+    if (endedByLimit) return;
+    if (video.currentTime >= MAX_SECONDS) {
+      endedByLimit = true;
+      // snap to the limit to avoid tiny overshoots
+      video.currentTime = Math.min(MAX_SECONDS, video.duration || MAX_SECONDS);
+
+      // Attempt to capture the current frame to a canvas and replace the video with an img
+      try {
+        const canvas = document.createElement('canvas');
+        canvas.width = video.videoWidth || video.clientWidth || 1280;
+        canvas.height = video.videoHeight || video.clientHeight || 720;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        const data = canvas.toDataURL('image/jpeg', 0.9);
+
+        const img = document.createElement('img');
+        img.src = data;
+        img.alt = 'Hero final frame';
+        img.className = 'hero-video-poster';
+
+        // Hide the video and insert the poster image in the same container
+        video.style.display = 'none';
+        if (video.parentNode) video.parentNode.insertBefore(img, video.nextSibling);
+      } catch (e) {
+        // If capture fails (cross-origin or other), just pause the video
+        video.pause();
+      }
+    }
+  });
+
+  // Pause video when page hidden to save resources
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) video.pause(); else video.play().catch(() => {});
+  });
+})();

@@ -1,88 +1,71 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MOX | Revista de proyectos</title>
-    <meta
-      name="description"
-      content="MOX, revista vertical de proyectos arquitectonicos, oportunidades de desarrollo y escenarios de inversion."
-    />
+    <title>CHIHIZA</title>
+    <meta name="description" content="CHIHIZA — Communities for returning to the land." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-      <header class="topbar" aria-label="Navegacion principal">
-      <a class="brand" href="projects.html" aria-label="MOX inicio">
-        <span class="brand-mark">MOX</span>
-        <span class="brand-line"></span>
-      </a>
-      <nav class="nav">
-        <a href="projects.html">Proyectos</a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
-        <a class="nav-whatsapp" href="https://wa.me/573219931029" target="_blank" rel="noreferrer">WhatsApp</a>
-      </nav>
-    </header>
-
-    <main class="feed" id="proyectos">
-      <!-- dashboard moved to projects.html -->
-
-      <section class="project-label">
-        <div class="project-label-inner">
-          <p class="project-label-type">Proyecto</p>
-          <h2 class="project-label-title">Refugio Río Frío — Tabio, Cundinamarca</h2>
-          <p class="project-label-sub">Vivienda campestre con paisaje andino y atmósfera serena.</p>
+    <!-- Section 1: hero image -->
+    <section class="section-visual">
+      <div class="section-visual-inner">
+        <div class="section-visual-frame">
+          <img src="./proyectos/natauta/hero.png" alt="Section 1 hero image" />
+          <div class="section-visual-overlay"></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="project-slide image-slide" id="proyecto-1-detalle-1">
-        <div class="image-stage">
-          <img src="./proyectos/001/principal.png" alt="Imagen principal Refugio Rio Frio" />
+    <!-- Section 5: full-bleed image -->
+    <section class="section-bleed" aria-hidden="false">
+      <img src="./proyectos/natauta/seccion5.png" alt="Section 5 image" />
+    </section>
+
+    <!-- Section 3: full-screen image -->
+    <section class="section-visual">
+      <div class="section-visual-inner">
+        <div class="section-visual-frame">
+          <img src="./proyectos/natauta/seccion3.png" alt="Section 3 image" />
+          <div class="section-visual-overlay"></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="project-slide image-slide" id="proyecto-1-detalle-2">
-        <div class="image-stage">
-          <img src="./proyectos/001/potencial.png" alt="Render de potencial Refugio Rio Frio" />
+    <!-- Section 4: full-bleed image -->
+    <section class="section-bleed" aria-hidden="false">
+      <img src="./proyectos/natauta/seccion4.png" alt="Section 4 image" />
+    </section>
+    
+    <!-- Section 2: river image -->
+    <section class="section-visual">
+      <div class="section-visual-inner">
+        <div class="section-visual-frame">
+          <img src="./proyectos/natauta/seccion2.png" alt="Section 2 image" />
+          <div class="section-visual-overlay"></div>
         </div>
-      </section>
+      </div>
+    </section>
+    <!-- Section 6: full-bleed image -->
+    <section class="section-bleed" aria-hidden="false">
+      <img src="./proyectos/natauta/seccion6.png" alt="Section 6 image" />
+    </section>
 
-      <section class="project-slide image-slide" id="proyecto-1-detalle-3">
-        <div class="image-stage">
-          <img src="./proyectos/001/desarrollo.png" alt="Concepto de desarrollo Refugio Rio Frio" />
+    <!-- Section 7: full-screen image -->
+    <section class="section-visual">
+      <div class="section-visual-inner">
+        <div class="section-visual-frame">
+          <img src="./proyectos/natauta/seccion7.jpeg" alt="Section 7 image" />
+          <div class="section-visual-overlay"></div>
+          <a class="book-button" href="#">Book</a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="project-label">
-        <div class="project-label-inner">
-          <p class="project-label-type">Proyecto</p>
-          <h2 class="project-label-title">Refugio Tropical — La Vega, Cundinamarca</h2>
-          <p class="project-label-sub">Vivienda campestre con paisaje tropical y atmósfera serena.</p>
-        </div>
-      </section>
-
-      <section class="project-slide image-slide" id="proyecto-2-detalle-1">
-        <div class="image-stage">
-          <img src="./proyectos/002/principal.png" alt="Imagen principal del segundo proyecto" />
-        </div>
-      </section>
-
-      <section class="project-slide image-slide" id="proyecto-2-detalle-2">
-        <div class="image-stage">
-          <img src="./proyectos/002/potencial.png" alt="Render de potencial del segundo proyecto" />
-        </div>
-      </section>
-
-      <section class="project-slide image-slide" id="proyecto-2-detalle-3">
-        <div class="image-stage">
-          <img src="./proyectos/002/desarrollo.png" alt="Concepto de desarrollo del segundo proyecto" />
-        </div>
-      </section>
-
-    </main>
-
-    <!-- barra lateral eliminada para minimalismo -->
-
-    <a class="reserve-floater" href="https://wa.me/573219931029?text=Hola%20MOX%2C%20quiero%20reservar%20o%20conocer%20mas%20sobre%20Refugio%20Rio%20Frio." target="_blank" rel="noreferrer" aria-label="Reservar">Reservar</a>
     <script src="./script.js"></script>
   </body>
 </html>
